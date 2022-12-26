@@ -1,3 +1,4 @@
+
 import pygame
 
 pygame.init()
@@ -6,11 +7,11 @@ SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
 SCREEN = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-
+# print(pygame.font.get_fonts())
 def dinoGame():
     color = (94, 186, 125)
 
-    font = pygame.font.Font('freesansbold.ttf', 32)
+    font = pygame.font.SysFont('lucidaconsole', 32, italic=False, bold=False)
     text = font.render('Welcome To GameJam Workshop!', True, color, None)
 
     textRect = text.get_rect()
