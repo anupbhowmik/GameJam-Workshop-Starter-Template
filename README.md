@@ -19,13 +19,14 @@ pip install pygame
 You are ready to build your first game on `python`!
 
 ## What we will cover
-1. [ ] Basic object rendering on screen
-2. [ ] Clock timing
-3. [ ] Basic pyGame events
+1. [x] Basic object rendering on screen
+2. [x] Clock timing
+3. [x] Basic pyGame events
 4. [ ] Rendering images
-5. [ ] Moving objects on the screen
-6. [ ] Taking user input from keyboard
+5. [x] Moving objects on the screen
+6. [x] Taking user input from keyboard
 7. [ ] Playing background music
+8. [x] Basic Animation
 
 **We will learn all these by developing a game from scratch.
 So keep your Computer and coffee mug ready if you want to follow along!**
