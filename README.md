@@ -27,7 +27,10 @@ python dino_game.py
 5. [x] Moving objects on the screen
 6. [x] Taking user input from keyboard
 7. [x] Playing background music
-8. [x] Basic Animation
+8. [x] Basic Animation of Bird and Dino Running
+9. [x] Basic Collision detection
+10. [x] Basic Game Over screen
+11. [x] Basic Scoreboard
 
 **We will learn all these by developing a game from scratch.
 So keep your Computer and coffee mug ready if you want to follow along!**
