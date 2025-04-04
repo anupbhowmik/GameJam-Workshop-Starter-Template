@@ -1,27 +1,28 @@
+# PyGame Workshop Starter Code
+
 ## Installation
 
 ### Set up environment
-- Install the latest version of `python` from 
-https://www.python.org/downloads/
-- Download and install `pyCharm` from https://www.jetbrains.com/pycharm/download/#section=windows <br>
-The `Community edition` should be good enough
 
- ### Set up pyGame
-- Mehtod 1 (using `pip`)
+- Install the latest version of `python` from [here](https://www.python.org/downloads/)
+
+### Set up PyGame
+
 ```bash
 pip install pygame
 ```
-- Method 2
-  - Inside pycharm go to file > settings > Project > Python Interpreter
-  - Inside Python Interpreter, click on the `+` icon and search for `pygame`
-  - Select `pygame` and click on `install package`
-  
-You are ready to build your first game on `python`!
+
+### Run the Game
+
+```bash
+python dino_game.py
+```
 
 ## What we will cover
+
 1. [x] Basic object rendering on screen
 2. [x] Clock timing
-3. [x] Basic pyGame events
+3. [x] Basic PyGame events
 4. [x] Rendering images
 5. [x] Moving objects on the screen
 6. [x] Taking user input from keyboard
