@@ -170,8 +170,6 @@ def playMusic():
     mixer.music.play()
 
 
-
-
 class Obstacle:
     def __init__(self, image, type):
         self.image = image
@@ -207,6 +205,21 @@ class Bird(Obstacle):
         self.type = 0
         super().__init__(image, self.type)
         self.rect.y = random.choice([250, 300])
+        self.step_index = 0  # For animation
+
+    def updateObstacle(self):
+        super().updateObstacle()
+        self.step_index += 1
+        if self.step_index >= 20:  # Reset step index for smooth animation
+            self.step_index = 0
+
+    def draw(self, SCRN):
+        # Alternate between the two bird images for animation
+        if self.step_index < 10:
+            self.image = BIRD[0]
+        else:
+            self.image = BIRD[1]
+        SCRN.blit(self.image, self.rect)
 
 
 def displayScore(SCRN, points):
