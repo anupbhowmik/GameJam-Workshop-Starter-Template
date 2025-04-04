@@ -1,4 +1,4 @@
-# PyGame Workshop Starter Code
+# Chrome Dino Game in PyGame
 
 In this workshop, we will cover some basics of PyGame and build a simple Dino Game! The game is inspired by the Google Chrome Dino Game, which appears when you are offline.
 The objective of the game is to control a dinosaur and avoid obstacles (cacti) while collecting points. The game features basic animations, collision detection, and a scoring system.
@@ -21,7 +21,13 @@ pip install pygame
 python dino_game.py
 ```
 
-## What we will cover
+## Game Controls
+
+- Press the **spacebar** to make the dinosaur jump.
+- Press the **down arrow** to make the dinosaur duck.
+The game will be progressively difficult as the speed of the dino increases over time.
+
+## Concepts Covered in this Workshop
 
 1. [x] Basic object rendering on screen
 1. [x] Clock timing

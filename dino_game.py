@@ -20,17 +20,16 @@ DUCKING = [pygame.image.load("Assets/Dino/DinoDuck1.png"),
 
 LARGE_TREE = [pygame.image.load("Assets/Cactus/LargeCactus1.png"),
               pygame.image.load("Assets/Cactus/LargeCactus2.png"),
-              pygame.image.load("Assets/Cactus/LargeCactus3.png")]
+             ]
 
 SMALL_TREE = [pygame.image.load("Assets/Cactus/SmallCactus1.png"),
               pygame.image.load("Assets/Cactus/SmallCactus2.png"),
-              pygame.image.load("Assets/Cactus/SmallCactus3.png")]
+              ]
 
 BIRD = [pygame.image.load("Assets/Bird/Bird1.png"),
         pygame.image.load("Assets/Bird/Bird2.png")]
 
 CLOUD = pygame.image.load("Assets/Other/Cloud.png")
-FIRE = pygame.image.load("Assets/Other/Fire.png")
 
 BG = pygame.image.load("Assets/Other/Track.png")
 
@@ -188,14 +187,14 @@ class Obstacle:
 
 class SmallCactus(Obstacle):
     def __init__(self, image):
-        self.type = random.randint(0, 2)
+        self.type = random.randint(0, 1)
         super().__init__(image, self.type)
         self.rect.y = 325
 
 
 class LargeCactus(Obstacle):
     def __init__(self, image):
-        self.type = random.randint(0, 2)
+        self.type = random.randint(0, 1)
         super().__init__(image, self.type)
         self.rect.y = 300
 
@@ -234,6 +233,9 @@ def showGameOverScreen(SCRN, points):
     score_text = font.render(f"Your Score: {points}", True, (0, 0, 0))
     restart_text = font.render("Press R to Restart", True, (0, 0, 0))
 
+    global GAME_SPEED
+    GAME_SPEED = 14 # reset the game speed
+
     SCRN.fill((255, 255, 255))
     SCRN.blit(game_over_text, (SCRN_WIDTH // 2 - game_over_text.get_width() // 2, SCRN_HEIGHT // 2 - 50))
     SCRN.blit(score_text, (SCRN_WIDTH // 2 - score_text.get_width() // 2, SCRN_HEIGHT // 2))
@@ -264,7 +266,6 @@ def dino_game():
         obstacles = []
 
         points = 0
-        death_count = 0
 
         playMusic()
 
@@ -305,15 +306,14 @@ def dino_game():
 
                 # Check for collision
                 if player.dino_rect.colliderect(obstacle.rect):
-                    pygame.time.delay(500)
-                    death_count += 1
+                    # pygame.time.delay(500)
                     showGameOverScreen(SCREEN, points)
                     run = False  # Exit the game loop to restart
                     break
 
             # Display score
             points += 1
-            if points % 100 == 0:
+            if points % 200 == 0:
                 global GAME_SPEED
                 GAME_SPEED += 1
             displayScore(SCREEN, points)
